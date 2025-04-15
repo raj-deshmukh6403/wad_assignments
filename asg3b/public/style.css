@@ -1,0 +1,35 @@
+body {
+    background-color: #f7f9fc;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    max-width: 960px;
+}
+
+.card {
+    border-radius: 8px;
+}
+
+.card-header {
+    border-bottom: 1px solid #e3e6f0;
+}
+
+#toggleUserList {
+    transition: all 0.3s ease;
+}
+
+#toggleUserList:hover,
+#toggleUserList:focus {
+    background-color: #0d6efd;
+    color: #fff;
+    border-color: #0d6efd;
+}
+
+input.form-control {
+    border-radius: 4px;
+}
+
+button.btn {
+    border-radius: 4px;
+}

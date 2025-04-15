@@ -1,0 +1,43 @@
+/* Featured Artists Section */
+.featured-artists {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.featured-artists .artist-item {
+    text-align: center;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    width: 200px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.featured-artists .artist-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.featured-artists .artist-img {
+    width: 100%;
+    height: auto; /* Remove this if you want fixed height */
+    object-fit: cover; /* Ensures the image maintains its aspect ratio */
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+    
+.featured-artists h5 {
+    font-size: 1.2em;
+    margin: 10px 0 5px;
+    color: #333;
+}
+
+.featured-artists p {
+    font-size: 0.9em;
+    color: #666;
+}

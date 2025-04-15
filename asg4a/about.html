@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     
+    <link rel="stylesheet" src="style1.css"/>
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <title>Demo of jQuery Mobile</title>
+    <script>
+        $(document).on("mobileinit", function() {
+            $.mobile.defaultPageTransition = "slide";
+        });
+        
+        // Page initialization
+        $(document).on("pagecreate", function() {
+            // Initialize custom components
+            $("[data-role='navbar']").navbar();
+            $("[data-role='listview']").listview();
+            $("[data-role='collapsible']").collapsible();
+            $("[data-role='collapsible-set']").collapsibleset();
+            
+            // Handle device orientation changes
+            $(window).on("orientationchange", function(event) {
+                if (event.orientation === "portrait") {
+                    $(".content").css("padding", "10px");
+                } else {
+                    $(".content").css("padding", "20px");
+                }
+            });
+        });
+        
+        // About page specific initialization
+        $(document).on("pagecreate", "#aboutPage", function() {
+            // Show More button functionality - using delegated event handler
+            $(document).on("click", "#showMore", function() {
+                $("#moreInfo").slideToggle(300);
+                
+                var btnText = $(this).text();
+                if (btnText.indexOf("Show More") !== -1) {
+                    $(this).text("Show Less").removeClass("ui-icon-plus").addClass("ui-icon-minus");
+                } else {
+                    $(this).text("Show More").removeClass("ui-icon-minus").addClass("ui-icon-plus");
+                }
+                
+                // Refresh any jQuery Mobile widgets after showing content
+                setTimeout(function() {
+                    $("#moreInfo").find("[data-role='listview']").listview("refresh");
+                    $("#moreInfo").find("[data-role='collapsible']").collapsible("refresh");
+                    $("#moreInfo").find("[data-role='collapsible-set']").collapsibleset("refresh");
+                }, 310);
+                
+                return false;
+            });
+        });
+        
+        // Home page gallery
+        $(document).on("pagecreate", "#homePage", function() {
+            // For gallery interactions
+            $(".gallery-img").on("click", function() {
+                $(this).addClass("ui-shadow");
+            });
+        });
+    </script>
+</head>
+<body>
+   <div data-role="page" id="aboutPage" style="background-color:aliceblue;">
+        <div data-role="header" data-theme="b">
+            <h1>My Website</h1>
+        </div>
+        <div data-role="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="ui-btn-active">About</a></li>
+                <li><a href="register.html">Register for Newsletter</a></li>
+            </ul>
+        </div>
+        <center><h3>About Us</h3></center>
+        <div class="content" style="padding: 20px;">
+            <div class="ui-body ui-body-a ui-corner-all">
+                <h3>About Our Gallery</h3>
+                <p>We curate a high-definition image gallery featuring stunning photography from talented artists. All images are sourced from <a href="https://unsplash.com/" target="_blank">Unsplash</a>.</p>
+                
+                <a href="#" id="showMore" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-plus ui-btn-icon-left">Show More</a>
+                
+                <div id="moreInfo" style="display:none;">
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a">
+                            <div class="ui-bar ui-bar-a" style="height:100%">
+                                <h4>Our Mission</h4>
+                                <p>We aim to provide high-quality images for mobile users on all devices, making art accessible anywhere.</p>
+                            </div>
+                        </div>
+                        <div class="ui-block-b">
+                            <div class="ui-bar ui-bar-a" style="height:100%">
+                                <h4>Our Vision</h4>
+                                <p>Creating a world where beautiful imagery is available to everyone through mobile-friendly technology.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h4>Features of our site:</h4>
+                    <ul data-role="listview" data-inset="true">
+                        <li data-icon="check"><a href="#">Mobile-first design</a></li>
+                        <li data-icon="check"><a href="#">Touch-optimized interface</a></li>
+                        <li data-icon="check"><a href="#">Fast loading gallery</a></li>
+                        <li data-icon="check"><a href="#">Responsive on all devices</a></li>
+                    </ul>
+                    
+                    <div data-role="collapsible-set" data-theme="a" data-content-theme="a">
+                        <div data-role="collapsible">
+                            <h3>Contact Us</h3>
+                            <div class="ui-grid-a">
+                                <div class="ui-block-a">
+                                    <p><strong>Email:</strong><br>contact@example.com</p>
+                                </div>
+                                <div class="ui-block-b">
+                                    <p><strong>Phone:</strong><br>(123) 456-7890</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-role="collapsible">
+                            <h3>Location</h3>
+                            <p>123 Mobile Street<br>Web City, IN 12345</p>
+                            <div class="ui-bar-c ui-corner-all ui-shadow" style="height:200px;background:#eee;">
+                                <div style="text-align:center;padding-top:80px;">
+                                    [Map Placeholder]
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h4>Featured Artists</h4>
+                    <div class="ui-grid-b featured-artists">
+                        <div class="ui-block-a">
+                            <div class="artist-item">
+                                <img src="img1.png" alt="Artist 1" class="artist-img">
+                                <h5>Jane Doe</h5>
+                                <p>Nature Photographer</p>
+                            </div>
+                        </div>
+                        <div class="ui-block-b">
+                            <div class="artist-item">
+                                <img src="img3.jpg" alt="Artist 2" class="artist-img">
+                                <h5>John Smith</h5>
+                                <p>Urban Landscapes</p>
+                            </div>
+                        </div>
+                        <div class="ui-block-c">
+                            <div class="artist-item">
+                                <img src="img5.png" alt="Artist 3" class="artist-img">
+                                <h5>Alex Rivera</h5>
+                                <p>Abstract Art</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- <div data-role="footer">
+            <center>
+                <a href="index.html" class="ui-btn ui-btn-inline">Home</a>
+                <a href="about.html" class="ui-btn ui-btn-inline">About</a>
+                <a href="register.html" class="ui-btn ui-btn-inline">Register</a>
+            </center>
+        </div> -->
+   </div>  
+</body>
+</html>

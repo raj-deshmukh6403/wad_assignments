@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     
+    <link rel="stylesheet" src="style.css"/>
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <title>Demo of jQuery Mobile</title>
+    <script>
+        $(document).ready(function() {
+            // Initialize the page
+            $("[data-role='page']").trigger("create");
+            
+            // Add active class to current page in navbar
+            $("[data-role='navbar'] a").each(function() {
+                if ($(this).attr("href") === window.location.pathname.split("/").pop()) {
+                    $(this).addClass("ui-btn-active ui-state-persist");
+                }
+            });
+
+            // Smooth scroll for gallery
+            $(".content").on("scrollstart", function() {
+                console.log("User is scrolling through gallery");
+            });
+        });
+    </script>
+</head>
+<body>
+   <div data-role="page" id="homePage" style="background-color:aliceblue;">
+        <div data-role="header" data-theme="b">
+            <h1>My Website</h1>
+        </div>
+        <div data-role="navbar">
+            <ul>
+                <li><a href="index.html" class="ui-btn-active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="register.html">Register for Newsletter</a></li>
+            </ul>
+        </div>
+        <center><h3>Gallery</h3></center>
+        <div class="content">
+            <center>
+                <div class="rows">
+                    <img src="img1.png" alt="Img1" width="240" height="200">
+                    <img src="img2.jpg" alt="Img2" width="240" height="200">
+                    <img src="img3.jpg" alt="Img3" width="240" height="200">
+                </div>
+                <br>
+                <div class="rows">
+                    <img src="img4.jpeg" alt="Img4" width="240" height="200">
+                    <img src="img5.png" alt="Img5" width="240" height="200">
+                    <img src="img6.jpeg" alt="Img6" width="240" height="200">
+                </div>
+            </center>
+        </div>
+        <!-- <div data-role="footer">
+            <center>
+                <a href="index.html" class="ui-btn ui-btn-inline">Home</a>
+                <a href="about.html" class="ui-btn ui-btn-inline">About</a>
+                <a href="register.html" class="ui-btn ui-btn-inline">Register</a>
+            </center>
+        </div> -->
+   </div>  
+</body>
+</html>
