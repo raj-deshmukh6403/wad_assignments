@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="d-flex justify-content-center align-items-center px-3 py-2 bg-light border-bottom">
+        <div class="d-flex align-items-center">
+            <img src="logo.png" alt="Company Logo" style="width: 50px; height: 50px;">
+            <h3 class="ms-2 mb-0">BUYndSELL</h3>
+        </div>
+    </header>
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="col-md-2 d-md-block bg-dark sidebar">
+                <div class="position-sticky">
+                    <ul class="nav flex-column text-white">
+                        <li class="nav-item">
+                            <a class="nav-link text-blue" href="#">Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-blue" href="#">Users</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-blue" href="#">Complaints</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-blue" href="#">Sales</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <h1 class="h2">Dashboard</h1>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Total Users</h5>
+                                <p class="card-text">1,02</p>
+                                <a href="#" class="btn btn-primary">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">💵Total Sales</h5>
+                                <p class="card-text">₹3500</p>
+                                <a href="#" class="btn btn-primary">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Complaints</h5>
+                                <p class="card-text">7 New Complaints</p>
+                                <a href="#" class="btn btn-primary">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="table-responsive mt-4">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Role</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td><img src="admin.jpg" alt="Rajvardhan Deshmukh" style="width: 40px; height: 40px; border-radius: 50%;">Rajvardhan Deshmukh</td>
+                                <td>harshraj93098@gmail.com</td>
+                                <td>Admin</td>
+                                <td><a href="#" class="btn btn-sm btn-primary">Edit</a></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td><img src="user1.jpg" alt="Atharav Desai" style="width: 40px; height: 40px; border-radius: 50%;">Atharva Desai
+                                </td>
+                                <td>datharva61@gmail.com</td>
+                                <td>User</td>
+                                <td><a href="#" class="btn btn-sm btn-primary">Edit</a></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td><img src="user2.jpg" alt="Aryan Jadhav" style="width: 40px; height: 40px; border-radius: 50%;">Aryan Jadhav
+                                </td>
+                                <td>ajadhav786@gmail.com</td>
+                                <td>User</td>
+                                <td><a href="#" class="btn btn-sm btn-primary">Edit</a></td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </main>
+        </div>
+    </div>
+
+</body>
+</html>

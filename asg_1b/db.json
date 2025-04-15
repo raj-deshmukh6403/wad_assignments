@@ -1,0 +1,74 @@
+{
+  "users": [
+    {
+      "id": "1157",
+      "name": "Rajvardhan Deshmukh",
+      "email": "rajvardhanhd6403@gmail.com",
+      "mobile": "9309815333",
+      "address": "Radhe Shyam,Mohan Nagar,Dhanakwadi",
+      "city": "Pune",
+      "hobbies": "Reading, Traveling",
+      "gender": "Male"
+    },
+    {
+      "id": "69d8",
+      "name": "raj",
+      "email": "nbdvs23@gmail.com",
+      "mobile": "7666484708",
+      "address": "pune,mumbai",
+      "city": "dehradun",
+      "hobbies": "Reading, Traveling, Sports",
+      "gender": "Male"
+    },
+    {
+      "id": "92f4",
+      "name": "tanmay",
+      "email": "desaiatharv907@gmail.com",
+      "mobile": "4569872365",
+      "address": "chennai",
+      "city": "mumbai",
+      "hobbies": "Reading",
+      "gender": "Male"
+    },
+    {
+      "id": "013f",
+      "name": "Rajvardhan Deshmukh",
+      "email": "bhagyeshmahatekar@gmail.com",
+      "mobile": "9876543210",
+      "address": "Radhe Shyam,Mohan Nagar,Dhanakwadi",
+      "city": "Pune",
+      "hobbies": "Reading",
+      "gender": "Female"
+    },
+    {
+      "id": "8d2d",
+      "name": "shivaji",
+      "email": "I2K221241@ms.pict.edu",
+      "mobile": "9552848132",
+      "address": "Radhe Shyam,Mohan Nagar,Dhanakwadi",
+      "city": "Pune",
+      "hobbies": "Reading",
+      "gender": "Male"
+    },
+    {
+      "id": "72fb",
+      "name": "babar",
+      "email": "desaiatharv907@gmail.com",
+      "mobile": "9876543210",
+      "address": "Radhe Shyam,Mohan Nagar,Dhanakwadi",
+      "city": "Pune",
+      "hobbies": "Traveling",
+      "gender": "Male"
+    },
+    {
+      "id": "2ac8",
+      "name": "Rajvardhan Deshmukh",
+      "email": "desaiatharv907@gmail.com",
+      "mobile": "9876543210",
+      "address": "Radhe Shyam,Mohan Nagar,Dhanakwadi",
+      "city": "Pune",
+      "hobbies": "Reading, Traveling",
+      "gender": "Male"
+    }
+  ]
+}
